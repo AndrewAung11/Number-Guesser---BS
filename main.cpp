@@ -42,9 +42,9 @@ int main() {
     int ok = sGuess(mid);
     if (ok == 0) {
       int cdt = ask();
-      if (cdt == 0) {
+      if (cdt == 1) {
         end = mid - 1;
-      } else if(cdt == 1) {
+      } else if(cdt == 0) {
         start = mid + 1;
       }
     } else if (ok == 1) {
