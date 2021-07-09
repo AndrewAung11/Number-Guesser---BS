@@ -37,7 +37,7 @@ int main() {
   bool found = false;
   int start = ln;
   int end = hn;
-  while(!found) {
+  while (!found) {
     int mid = (start+end)/2;
     int ok = sGuess(mid);
     if (ok == 0) {
