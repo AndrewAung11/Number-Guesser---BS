@@ -27,7 +27,9 @@ int ask() {
 }
 
 int main() {
+  //highest number in the range
   int hn;
+  //lowest number int the range
   int ln;
 
   cout << "The highest number in the range?" << endl;
@@ -37,17 +39,25 @@ int main() {
   cin >> ln;
 
   bool found = false;
+  //start of the search range
   int start = ln;
+  //end of the search range
   int end = hn;
   
+  //if haven't found
   while (!found) {
+    //mid number of the range | guess
     int mid = (start+end)/2;
+    //ask if it is
     int ok = sGuess(mid);
+    //if not
     if (ok == 0) {
+      //ask the condition of the guess
       int cdt = ask();
+      //if guess is high
       if (cdt == 1) {
         end = mid - 1;
-      } else if (cdt == 0) {
+      } else if (cdt == 0) { //if low
         start = mid + 1;
       }
     } else if (ok == 1) {
