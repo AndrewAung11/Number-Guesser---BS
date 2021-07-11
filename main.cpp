@@ -60,7 +60,7 @@ int main() {
       } else if (cdt == 0) { //if low
         start = mid + 1;
       }
-    } else if (ok == 1) {
+    } else if (ok == 1) { //if the number is the mid | found
       cout << "Yay!" << endl;
       found = true;
     }
